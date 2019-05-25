@@ -1,0 +1,19 @@
+@import "compass"; // @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Teko:700');
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font: bold 1.8rem 'Roboto Condensed', sans-serif;
+    line-height: 1.5;
+    color: white;
+    background: #ff5555;
+}
+
+*,
+*:after,
+*:before {
+    @include box-sizing(border-box);
+    // border: 1px dotted rgba(0, 0, 0, .8);
+}

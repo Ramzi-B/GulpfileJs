@@ -1,0 +1,86 @@
+@import "compass";
+@import "../partial/base";
+
+body {
+	background: purple;
+	margin: 0 auto;
+}
+
+header {
+	max-height: 50px;
+}
+
+h1 {
+	font-size: 4rem;
+}
+
+section {
+	border: 2px solid yellow;
+	text-align: center;
+
+	h2 {
+		margin: 0 auto;
+		max-width: 180px;
+		text-align: center;
+		color: red;
+	}
+}
+
+main section {
+	margin-top: 2em;
+}
+
+.intro {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background: purple;
+
+	.left-side {
+		width: 50%;
+		h1 {
+			font-size: 2rem;
+			color: yellow;
+			margin: 0;
+			text-align: center;
+		}
+	}
+}
+
+.navbar {
+	display: flex;
+	justify-content: flex-start;
+
+	a {
+		position: relative;
+		margin: 0;
+		padding: 1em;
+		color: cyan;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		transition: all .3s ease-in;
+
+		&::after {
+			content: '';
+			position: absolute;
+			height: 2px;
+			width: 40%;
+			left: 50%;
+			bottom: 0;
+			background: yellow;
+			opacity: 0;
+			transform: translate(-50%) scaleX(1);
+		}
+
+		&:hover {
+			color: blue;
+		}
+
+		&:focus::after,
+		&:hover::after {
+			width: 60%;
+			height: 4px;
+			opacity: 1;
+		}
+	}
+}
